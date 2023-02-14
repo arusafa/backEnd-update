@@ -39,7 +39,7 @@ router.post('/tutor/login', async (req, res) => {
 router.get('/tutor/login', auth, async (req, res) => {
     try {
       // Find the user with the given ID in the JWT token
-      const user = await User.findById(req.user.id).select('-password');
+      const user = await User.findById(req.user.id).select('email');
   
       if (!user) {
         return res.status(404).json({ message: 'User not found.' });
