@@ -6,6 +6,7 @@ const { auth } = require("./middlewares/auth");
 const loginRoute = require("./routes/tutor-login");
 const signupRoute = require("./routes/tutor-signup");
 const tutorRoute = require("./routes/tutor");
+const resetPassword = require("./routes/reset-password");
 
 const app = express();
 
